@@ -1,3 +1,8 @@
+class UserTask < ApplicationRecord
+  belongs_to :user
+
+end
+
 # == Schema Information
 #
 # Table name: user_tasks
@@ -7,7 +12,9 @@
 #  due         :date
 #  created_at  :datetime         not null
 #  updated_at  :datetime         not null
+#  user_id     :integer
 #
-
-class UserTask < ApplicationRecord
-end
+# Indexes
+#
+#  index_user_tasks_on_user_id  (user_id)
+#
